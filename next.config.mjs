@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    API_URL: "http://localhost:3000",
+    API_URL: "https://lawconnect.vercel.app",
     DB_LOCAL_URI:
       "mongodb+srv://abdousaboundji5:abdou2024mongodb@cluster0.t9nwl7c.mongodb.net/lawconnect?retryWrites=true&w=majority",
     DB_URI:
@@ -23,7 +23,7 @@ const nextConfig = {
     SMTP_FROM_EMAIL: "noreply@bookit.com",
     SMTP_FROM_NAME: "BookIT",
 
-    NEXTAUTH_URL: "http://localhost:3000",
+    NEXTAUTH_URL: "https://lawconnect.vercel.app",
     NEXTAUTH_SECRET: "KSDFJKLSDJFLKSDFJSLDKF934KJLDJGDLKGFJDF",
     REVALIDATE_TOKEN: "JK34J50JSDKFLJSDKF034I5DKFJSDK4IJFKSDJHFDYGDH",
   },
