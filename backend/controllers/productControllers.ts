@@ -140,7 +140,7 @@ export const deleteProductImage = catchAsyncErrors(
   }
 );
 
-// Upload product Files  =>  /api/user/products/:id/upload_images
+// Upload product Files => /api/user/products/:id/upload_images
 export const uploadProductFiles = catchAsyncErrors(
   async (req: NextRequest, { params }: { params: { id: string } }) => {
     const product = await Product.findById(params.id);
@@ -157,10 +157,23 @@ export const uploadProductFiles = catchAsyncErrors(
 
     const urls = await Promise.all((body?.files).map(uploader));
 
-    product.files.push(...urls);
+    // Iterate over each URL and replace "http://" with "https://"
+    const urlsHttps = urls.map((url) => {
+      if (typeof url === "string") {
+        return url.replace(/^http:/, "https:");
+      } else {
+        // If the URL is an object, preserve its structure but replace the URL
+        return { ...url, url: url.url.replace(/^http:/, "https:") };
+      }
+    });
 
+    // Push the HTTPS URLs to the product's files array
+    product.files.push(...urlsHttps);
+
+    // Save the product with the updated files URLs
     await product.save();
 
+    // Respond with success and the updated product
     return NextResponse.json({
       success: true,
       product,
