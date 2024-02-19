@@ -3,7 +3,7 @@ import Invoice from "@/components/invoice/Invoice";
 import { getAuthHeader } from "@/helpers/authHeader";
 
 export const metadata = {
-  title: "Booking Invoice",
+  title: "Purchase Invoice",
 };
 
 const getBooking = async (id: string) => {
