@@ -7,7 +7,7 @@ interface Props {
 
 const AdminLayout = ({ children }: Props) => {
   return (
-    <div>
+    <div className="min-h-screen">
       <div className="mt-2 mb-4 bg-light py-4">
         <h2 className="text-secondary text-center">User Dashboard</h2>
       </div>

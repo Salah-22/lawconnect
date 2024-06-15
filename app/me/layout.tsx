@@ -7,7 +7,7 @@ interface Props {
 
 const UserLayout = ({ children }: Props) => {
   return (
-    <div>
+    <div className="h-screen">
       <div className="mt-2 mb-4 bg-light py-4">
         <h2 className="text-secondary text-center">User Settings</h2>
       </div>

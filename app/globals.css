@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: rgba(2, 106, 143, 1);
+  --btn-color: rgba(220, 102, 40, 1);
+}
 html,
 body {
   width: 100%;

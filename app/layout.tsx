@@ -32,7 +32,7 @@ export default function RootLayout({
         </GlobalProvider>
 
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></Script>
-        <Script src="https://kit.fontawesome.com/9edb65c86a.js"></Script>
+        <Script src="https://kit.fontawesome.com/ed0c08e803.js"></Script>
       </body>
     </html>
   );

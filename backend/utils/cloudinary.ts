@@ -16,6 +16,7 @@ const upload_file = (
       {
         resource_type: "auto",
         folder: folder,
+        timeout: 3600000,
       },
       (error, result: any) => {
         resolve({

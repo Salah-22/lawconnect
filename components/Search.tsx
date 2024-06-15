@@ -35,11 +35,11 @@ const Search = () => {
       .filter(Boolean)
       .join("&");
 
-    router.push(`/?${queryString}`);
+    router.push(`/products/?${queryString}`);
   };
   return (
     <form
-      className="flex items-center justify-center bg-gray-500 w-full "
+      className="flex items-center justify-center mb-4 w-full"
       action=""
       onSubmit={submitHandler}
     >
